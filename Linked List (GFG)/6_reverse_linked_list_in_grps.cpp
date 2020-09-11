@@ -13,7 +13,7 @@ struct Node
 };
 // Write your function below //
 
-Node *reverse(Node *head, int k)
+Node *reverse(Node *head, int k) //Recursive Solution
 {
     Node *curr = head;
     Node *prev = NULL, *next = NULL;
@@ -32,6 +32,36 @@ Node *reverse(Node *head, int k)
         head->next = restHead;
     }
     return prev;
+}
+
+Node *reverseIt(Node *head, int k) //Iterative Solution
+{
+    Node *curr = head, *prevFirst = NULL;
+    bool isFirstPass = true;
+    while (curr != NULL)
+    {
+        Node *first = curr, *prev = NULL;
+        int count = 0;
+        while (curr != NULL && count < k)
+        {
+            Node *next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+            count++;
+        }
+        if (isFirstPass)
+        {
+            head = prev;
+            isFirstPass = false;
+        }
+        else
+        {
+            prevFirst->next = prev;
+        }
+        prevFirst = first;
+    }
+    return head;
 }
 
 // Write your function above //
