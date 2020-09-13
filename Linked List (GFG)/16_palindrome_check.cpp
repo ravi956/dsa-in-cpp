@@ -38,14 +38,19 @@ bool isPalindrome(Node *head)
         slow_p = slow_p->next;
     }
     Node *rev = reverse(slow_p->next);
+    Node *original_rev = rev; //For retaining the original linked list
     Node *curr = head;
     while (rev != NULL)
     {
         if (rev->data != curr->data)
+        {
+            slow_p->next = reverse(original_rev); //For reversing the changes made in the linked list
             return false;
+        }
         rev = rev->next;
         curr = curr->next;
     }
+    slow_p->next = reverse(original_rev); //For reversing the changes made in the linked list
     return true;
 }
 
@@ -73,7 +78,7 @@ void printList(Node *head)
 {
     while (head != NULL)
     {
-        cout << head->data << " ";
+        cout << head->data;
         head = head->next;
     }
 }
@@ -92,5 +97,7 @@ int main()
         head = insertEnd(head, data);
     }
     cout << isPalindrome(head);
+    cout << "\nLinked List : ";
+    printList(head);
     return 0;
 }
