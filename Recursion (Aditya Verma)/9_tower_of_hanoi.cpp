@@ -6,12 +6,11 @@ using namespace std;
 
 void toh(int n, char A, char C, char B, int &count) //Hypothesis, that it will transfer n plates from A to C using B as auxiliary
 {
-    count++;
-    if (n == 1) //Base Case
+    if (n == 0) //Base Case
     {
-        cout << "Move plate " << n << " from " << A << " to " << C << "\n";
         return;
     }
+    count++;
     toh(n - 1, A, B, C, count);                                         //Hypothesis, move upper n-1 plates from A to B using C as auxiliary
     cout << "Move plate " << n << " from " << A << " to " << C << "\n"; //Induction, move the last plate from A to C
     toh(n - 1, B, C, A, count);                                         //Hypothesis, moving the upper n-1 plates from B to C using A as auxiliary
