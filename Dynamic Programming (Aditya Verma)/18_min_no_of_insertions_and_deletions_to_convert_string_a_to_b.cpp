@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int lcs_td(string& s1, string& s2, int m, int n)
+int lcs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -31,7 +31,7 @@ int main()
     cin >> s1;
     cout << "Enter the second string : ";
     cin >> s2;
-    int lcs_len = lcs_td(s1, s2, s1.length(), s2.length());
+    int lcs_len = lcs_bu(s1, s2, s1.length(), s2.length());
     cout << "Min no. of insertions : " << s2.length() - lcs_len << "\n";
     cout << "Max no. of deletions : " << s1.length() - lcs_len << "\n";
     return 0;

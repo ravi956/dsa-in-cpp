@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-string lcs_td(string& s1, string& s2, int m, int n)
+string lcs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
     string scs_string = "";
@@ -63,6 +63,6 @@ int main()
     cout << "Enter the second string : ";
     cin >> s2;
     cout << "Shortest common supersequence : ";
-    cout << lcs_td(s1, s2, s1.length(), s2.length()) << "\n";
+    cout << lcs_bu(s1, s2, s1.length(), s2.length()) << "\n";
     return 0;
 }

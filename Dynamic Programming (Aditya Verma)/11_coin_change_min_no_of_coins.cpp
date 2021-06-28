@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int knapsackTD(int coin[], int sum, int n)
+int knapsackBU(int coin[], int sum, int n)
 {
     int dp[n + 1][sum + 1];
     //both loops can be combined at one place
@@ -42,7 +42,7 @@ int main()
         cin >> coin[i];
     cout << "Enter sum : ";
     cin >> sum;
-    int result = knapsackTD(coin, sum, n);
+    int result = knapsackBU(coin, sum, n);
     cout << "Minimum no. of coins required : ";
     (result >= INT_MAX - 1) ? cout << "NOT POSSIBLE" : cout << result;
     return 0;

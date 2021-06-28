@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int lcs_td(string &s1, string &s2, int m, int n)
+int lcs_bu(string &s1, string &s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -29,6 +29,6 @@ int main()
     cout << "Enter the second string : ";
     cin >> s2;
     cout << "Length of the longest common subsequence : ";
-    cout << lcs_td(s1, s2, s1.length(), s2.length()) << "\n";
+    cout << lcs_bu(s1, s2, s1.length(), s2.length()) << "\n";
     return 0;
 }

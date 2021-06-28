@@ -8,7 +8,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int lcs_td(string& s1, string& s2, int m, int n)
+int lcs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -34,6 +34,6 @@ int main()
     cout << "Enter the string : ";
     cin >> s;
     cout << "Length of the longest repeating subsequence : ";
-    cout << lcs_td(s, s, s.length(), s.length()) << "\n";
+    cout << lcs_bu(s, s, s.length(), s.length()) << "\n";
     return 0;
 }

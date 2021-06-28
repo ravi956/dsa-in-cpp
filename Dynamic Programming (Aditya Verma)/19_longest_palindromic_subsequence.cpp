@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int lcs_td(string& s1, string& s2, int m, int n)
+int lcs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -33,6 +33,6 @@ int main()
     string s2 = s1;
     reverse(s2.begin(), s2.end());
     cout << "Length of the longest palindromic subsequence : ";
-    cout << lcs_td(s1, s2, s1.length(), s2.length()) << "\n";
+    cout << lcs_bu(s1, s2, s1.length(), s2.length()) << "\n";
     return 0;
 }

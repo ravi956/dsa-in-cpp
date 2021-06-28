@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int knapsackTD(int coin[], int sum, int n)
+int knapsackBU(int coin[], int sum, int n)
 {
     int dp[n + 1][sum + 1];
     //both loops can be combined at one place
@@ -41,6 +41,6 @@ int main()
     cout << "Enter sum : ";
     cin >> sum;
     cout << "Total no. of ways : ";
-    cout << knapsackTD(coin, sum, n);
+    cout << knapsackBU(coin, sum, n);
     return 0;
 }

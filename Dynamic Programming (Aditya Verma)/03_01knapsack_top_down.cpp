@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int knapsackTD(int wt[], int val[], int W, int n)
+int knapsackBU(int wt[], int val[], int W, int n)
 {
     int dp[n + 1][W + 1];
     //both loops can be combined at one place
@@ -38,6 +38,6 @@ int main()
     cout << "Enter capacity of the knapsack : ";
     cin >> W;
     cout << "Maximum Profit : ";
-    cout << knapsackTD(wt, val, W, n);
+    cout << knapsackBU(wt, val, W, n);
     return 0;
 }

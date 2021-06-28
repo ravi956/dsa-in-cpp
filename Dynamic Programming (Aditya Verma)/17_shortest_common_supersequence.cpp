@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int scs_td(string& s1, string& s2, int m, int n)
+int scs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -37,6 +37,6 @@ int main()
     cout << "Enter the second string : ";
     cin >> s2;
     cout << "Length of the shortest common supersequence : ";
-    cout << scs_td(s1, s2, s1.length(), s2.length()) << "\n";
+    cout << scs_bu(s1, s2, s1.length(), s2.length()) << "\n";
     return 0;
 }

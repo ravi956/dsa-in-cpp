@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int lcs_td(string& s1, string& s2, int m, int n)
+int lcs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -30,7 +30,7 @@ int main()
     cin >> s1;
     cout << "Enter the string (pattern to be searched) : ";
     cin >> s2;
-    int lcs_length = lcs_td(s1, s2, s1.length(), s2.length());
+    int lcs_length = lcs_bu(s1, s2, s1.length(), s2.length());
     if (lcs_length == s2.length())
         cout << "TRUE\n";
     else

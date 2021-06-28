@@ -1,14 +1,14 @@
 // To find the minimum no. of deletions required to make a given string a palindrome by doing minimum deletions in the string
 
 // Min Deletions = Min Insertions = str.length() - LCS(str, reverse(str)) = str.length() - LPS
-// If a question is asked to get the minimum no. of insertions to make a string palindrome , it will be equal to 
-// minimum no. of deletions to make a string palindrome because the characters which are not the part of the 
+// If a question is asked to get the minimum no. of insertions to make a string palindrome , it will be equal to
+// minimum no. of deletions to make a string palindrome because the characters which are not the part of the
 // palindrome which are going to be deleted in order to make the string palindrome can also be inserted in order
 // to make the string palindrome
 #include <bits/stdc++.h>
 using namespace std;
 
-int lcs_td(string& s1, string& s2, int m, int n)
+int lcs_bu(string& s1, string& s2, int m, int n)
 {
     int dp[m + 1][n + 1];
 
@@ -36,6 +36,6 @@ int main()
     string s2 = s1;
     reverse(s2.begin(), s2.end());
     cout << "Min no of deletions to make a string a palindrome : ";
-    cout << s1.length() - lcs_td(s1, s2, s1.length(), s2.length()) << "\n";
+    cout << s1.length() - lcs_bu(s1, s2, s1.length(), s2.length()) << "\n";
     return 0;
 }
